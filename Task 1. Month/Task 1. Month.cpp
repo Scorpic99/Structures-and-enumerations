@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 
 enum class Month {
-    january,
+    january = 1,
     february,
     march,
     april,
@@ -20,48 +20,62 @@ int main()
     setlocale(LC_ALL, "Rus");
     int numMonth;
     do {
+        Month mon;
         std::cout << "Введите номер месяца: ";
         std::cin >> numMonth;
-        Month mon = static_cast<Month>(numMonth);
-        switch(static_cast<int>(mon)) {
-            case 0:
+        mon = static_cast<Month>(numMonth);
+        //std::cin >> mon;
+        
+        switch(mon) {
+            case static_cast<Month>(0):
                 std::cout << "До свидания";
                 break;
-            case 1: 
+            case Month::january: 
                 std::cout << "Январь";
                 break;
-            case 2:
+            case Month::february:
                 std::cout << "Февраль";
+                //mon = Month::february;
                 break;
-            case 3:
+            case Month::march:
                 std::cout << "Март";
+                //mon = Month::march;
                 break;
-            case 4:
+            case Month::april:
                 std::cout << "Апрель";
+                //mon = Month::april;
                 break;
-            case 5:
+            case Month::may:
                 std::cout << "Май";
+                //mon = Month::may;
                 break;
-            case 6:
+            case Month::june:
                 std::cout << "Июнь";
+                //mon = Month::june;
                 break;
-            case 7:
+            case Month::july:
                 std::cout << "Июль";
+                //mon = Month::july;
                 break;
-            case 8:
+            case Month::august:
                 std::cout << "Август";
+                //mon = Month::august;
                 break;
-            case 9:
+            case Month::september:
                 std::cout << "Сентябрь";
+                //mon = Month::september;
                 break;
-            case 10:
+            case Month::october:
                 std::cout << "Октябрь";
+                //mon = Month::october;
                 break;
-            case 11:
+            case Month::november:
                 std::cout << "Ноябрь";
+                //mon = Month::november;
                 break;
-            case 12:
+            case Month::december:
                 std::cout << "Декабрь";
+                //mon = Month::december;
                 break;
             default:
                 std::cout << "Неправельный номер";
@@ -69,5 +83,6 @@ int main()
         }
         std::cout << std::endl;
     } while (numMonth != 0);
+
 
 }

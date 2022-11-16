@@ -2,11 +2,11 @@
 
 struct Address
 {
-    std::string m_city;
-    std::string m_street;
-    int m_homeNum;
-    int m_flatNum;
-    int m_index;
+    std::string m_city = "неизвестно";
+    std::string m_street = "неизвестно";
+    int m_homeNum = 0;
+    int m_flatNum = 0;
+    int m_index = 0;
 };
 
 void Func(const Address &s) {
